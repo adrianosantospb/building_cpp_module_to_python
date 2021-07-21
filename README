@@ -4,8 +4,8 @@ ADICIONANDO SUBMODULO (GIT)
     - adiciona o .gitignore (C++, CMake etc...)
     - seleciona o projeto do git que deseja adicionar como SUBMODULO
         - glfw (por exemplo)
-        - git submodule add https://github.com/pybind/pybind11 external/bybind11
-            -- external/bybind11 eh o diretorio que sera utilizado para baixar o submodule
+        - git submodule add https://github.com/pybind/pybind11 external/pybind11
+            -- external/pybind11 eh o diretorio que sera utilizado para baixar o submodule
     - Opcional
         - criar arquivos sh para: 
             - config
@@ -14,5 +14,5 @@ ADICIONANDO SUBMODULO (GIT)
             PS: ver exemplos
     
     - No arquivo CMakeLists.txt raiz, adicionar o submodule:
-        add_subdirectory(external/bybind11)
+        add_subdirectory(external/pybind11)
 

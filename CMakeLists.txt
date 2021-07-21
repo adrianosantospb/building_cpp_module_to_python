@@ -11,7 +11,7 @@ add_executable(${PROJECT_NAME} main.cpp)
 add_subdirectory(calc)
 
 # Modulo do github
-add_subdirectory(external/bybind11)
+add_subdirectory(external/pybind11)
 
 # Cria um link do projeto com o diretorio da biblioteca (adiciona a visibilidade (PRIVATE ou PUBLIC))
 # Alem disso, criando esse link eh possivel referenciar as bibliotecas de forma padao <biblioteca.h>, sem necessidade de passar o caminho relativo.
