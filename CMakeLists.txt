@@ -10,6 +10,9 @@ add_executable(${PROJECT_NAME} main.cpp)
 # Cria um subprojeto dentro do projeto principal como uma biblioteca (executa o CMakeLists.txt interno)
 add_subdirectory(calc)
 
+# Modulo do github
+add_subdirectory(external/bybind11)
+
 # Cria um link do projeto com o diretorio da biblioteca (adiciona a visibilidade (PRIVATE ou PUBLIC))
 # Alem disso, criando esse link eh possivel referenciar as bibliotecas de forma padao <biblioteca.h>, sem necessidade de passar o caminho relativo.
 target_include_directories(${PROJECT_NAME} PRIVATE calc/)

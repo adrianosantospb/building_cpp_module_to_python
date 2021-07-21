@@ -1,3 +1,3 @@
-[submodule "external/glfw"]
-	path = external/glfw
-	url = https://github.com/glfw/glfw.git
+[submodule "external/bybind11"]
+	path = external/bybind11
+	url = https://github.com/pybind/pybind11
