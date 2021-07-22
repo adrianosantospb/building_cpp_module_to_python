@@ -34,11 +34,16 @@ INFORMACOES FUNDAMENTAIS
         https://pybind11.readthedocs.io/en/stable/basics.html
 
     * Para baixar o projeto de forma recursiva
-        git clone --recursive https://github.com/***
-        Porem, foi adicionado ao projeto o seguinte codigo para que o download das dependencias sejam automaticas:
-            message(STATUS "Loading submodules") ...
+        - git clone --recursive https://github.com/***
+        - Porem, foi adicionado ao projeto o seguinte codigo para que o download das dependencias sejam automaticas:
+             - message(STATUS "Loading submodules") ...
 
-    
     * Para remover um submodulo:
-        git submodule deinit
+        - git submodule deinit
+
+    * o PYBIND11_MODULE(exemplocalc, m) (dentro do modulo) == setup( name="exemplocalc".. (arquivo de instalacao)) == project(exemplocalc) (CMakeLists.txt)
+        - O nome do projeto tb deve ser diferente dos nomes dos arquivos dos modulos.
+
+
+
     
