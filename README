@@ -16,3 +16,29 @@ ADICIONANDO SUBMODULO (GIT)
     - No arquivo CMakeLists.txt raiz, adicionar o submodule:
         add_subdirectory(external/pybind11)
 
+
+    *** option ***
+    - Sao parametros configuravais no momento da instalacao. Ex: o opencv... -D CUDA_DNN=ON (ou OFF)
+        Ex: option(PYBIND11_NOPYTHON "Disable search for Python" OFF)
+
+
+INFORMACOES FUNDAMENTAIS
+    * Para adicionar um modulo ao projeto:
+        add_subdirectory(external/pybind11 pybind11), sendo pybind11 um nickname que servira como referencia
+        pybind11_add_module(${PROJECT_NAME} MODULE main.cpp), pybind11_add_module para adicionar o modulo aa biblioteca de conversao
+
+    * Projeto base para criacao do repositorio:
+        https://github.com/pybind/cmake_example
+    
+    * Repositorio da biblioteca utilizada para gerar o building do modulo em C++ para Python    
+        https://pybind11.readthedocs.io/en/stable/basics.html
+
+    * Para baixar o projeto de forma recursiva
+        git clone --recursive https://github.com/***
+        Porem, foi adicionado ao projeto o seguinte codigo para que o download das dependencias sejam automaticas:
+            message(STATUS "Loading submodules") ...
+
+    
+    * Para remover um submodulo:
+        git submodule deinit
+    

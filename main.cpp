@@ -1,9 +1,16 @@
 #include <iostream>
 
-#include <calc.h>
+#include <calculadora.h>
 
-int main(){
-    std::cout << "Testando alguma coisa compilada pelo cmake." << std::endl;
-    std::cout << some(12, 12.1) << std::endl;
-    return 0;
+#include <pybind11/pybind11.h>
+
+namespace py = pybind11;
+
+int add(int i, int j) {
+    return i + j;
+}
+
+PYBIND11_MODULE(exemplocalc, m) {
+    m.doc() = "pybind11 example plugin"; // optional module docstring
+    m.def("soma", &add, "A function which adds two numbers", py::arg("a"), py::arg("b"));
 };

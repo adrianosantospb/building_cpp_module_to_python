@@ -1,1 +1,0 @@
-float some(float a, float b);

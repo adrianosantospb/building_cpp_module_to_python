@@ -1,1 +1,1 @@
-add_library(calc calc.cpp)
+add_library(calculadora calculadora.cpp)
